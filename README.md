@@ -26,11 +26,28 @@ This guide teaches you how to perform **comparative homology protein modeling** 
 
 ---
 
+🗂️ Estrutura recomendada do diretório | Recommended folder structure | 推荐的目录结构
+
+```bash
+homology_modeling_project/
+├── align2d.py                 # Script de alinhamento entre molde e alvo
+├── model-single.py            # Script de modelagem por homologia
+├── template.ali               # Arquivo .ali contendo sequência do molde (template)
+├── alvo.ali                   # Arquivo .ali com a sequência da proteína alvo
+├── nome_do_template.pdb       # Estrutura tridimensional do molde (PDB)
+├── alvo-template.ali          # Gerado após alinhamento
+├── alvo-template.pap          # Alinhamento em formato PAP (opcional)
+├── model-single.log           # Log do processo de modelagem
+├── out                        # Arquivo com scores extraídos
+└── modelos/                   # (Opcional) Pasta onde os modelos podem ser salvos
+```
+---
+
 ### ✍️ Etapa 1: Criação do Arquivo `.ali` | Step 1: Create the `.ali` File | 第一步：创建 `.ali` 文件
 
 Este arquivo deve conter a sequência da proteína alvo formatada para o Modeller. Exemplo:
 
-```
+```bash
 >P1;alvo
 sequence:alvo::::::::
 SEQUENCIADASEQUENCIASEQUENCIASEQUENCIA*
